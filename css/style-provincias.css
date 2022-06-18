@@ -1,0 +1,14 @@
+#blog {
+    padding: 50px;
+    background-color: rgba(109, 166, 239, 0.752);
+}
+
+#blog .centrado {
+    margin-top: 70px;
+}
+
+@media (min-width: 1024px) {
+    #blog .centrado {
+        margin-top: 100px;
+    }
+}

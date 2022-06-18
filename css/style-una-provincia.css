@@ -1,0 +1,40 @@
+#blog .cuadrado {
+    animation: rotacion 5s infinite linear;
+}
+
+#info h2 {
+    color: rgb(7, 7, 7);
+    font-family: 'Roboto', 'Libre Baskerville', serif;
+    font-size: 28px;
+    text-align: center;
+    padding: 20px;
+}
+
+#info h3 {
+    font-family: 'Roboto', 'Titan One', 'Libre Baskerville', serif;
+    padding: 20px;
+    margin-top: 0;
+    font-size: 24px;
+}
+@media (min-width: 530px) {
+    #blog .cuadrado {
+        width: 400px;
+        height: 400px;
+    }
+    #blog img { 
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (min-width: 1024px) {
+    #blog .cuadrado {
+        width: 440px;
+        height: 440px;
+        
+    }
+    #blog img { 
+        width: 380px;
+        height: 380px;
+    }
+    
+}

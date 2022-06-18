@@ -1,0 +1,50 @@
+
+header {
+    width: 100%;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.logo {
+    text-align: center;
+    padding: 10px 0;
+    color: rgb(255, 251, 0);
+    font-size: 40px;
+    font-family: 'Titan One','Abril Fatface', 'Segoe UI', Tahoma, Geneva, Verdana;
+    transition: 1.5s;
+    text-decoration: none;
+    text-shadow: 0 0 0.2em #000;
+}
+
+hr {
+    border-top: 1px solid silver;
+}
+
+.menu {
+    text-align: center;
+    padding: 6px 0;
+    margin: 0;
+}
+
+.menu a {
+    color: rgb(255, 251, 0);
+    font-family: 'Roboto', 'Libre Baskerville', serif;
+    text-shadow: 0 0 0.2em #000;
+    text-decoration: none;
+    margin: 5px;
+    font-size: 20px;
+    
+}
+
+.menu a:hover {
+    color: rgba(59, 25, 192, 0.978);
+    text-shadow: 0 0 0.2em #fff;
+}
+
+@media (min-width: 1024px) {
+    .logo {
+        font-size: 60px;
+    }
+}

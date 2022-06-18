@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital@1&family=Titan+One&display=swap" rel="stylesheet">
+    <title>ColeccionArg</title>
+</head>
+
+<body>
+  <header >
+    <div class="centrado" >
+      <h1 class="logo">ColeccionArg</h1>
+      <hr>
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="pages/provincias.html">Provincias</a>
+      </nav>
+    </div>
+  </header>
+  
+  
+  <section id="banner"> 
+    <div class="imagen">
+    </div>
+  </section>
+
+  <section id="blog">
+    <hr>
+    <h2> Provincias mas visitadas</h2>
+    <hrclass="hr">
+    <div class="centrado">
+      <article >
+          <a href="pages/Buenos-Aires.html" target="_blank">
+              <figure>
+                  <img class="imagen" src="img/bs-as-2.jpg" alt="provincia">
+              </figure>
+              <div class="cuadrado"> 
+                  <h3>Bs As</h3>
+              </div>
+          </a>
+      </article>
+      
+
+        <article >
+            <a href="pages/Salta.html" target="_blank">
+                <figure>
+                    <img class="imagen" src="img/el-chalten.jpg" alt="provincia">
+                </figure>
+                <div class="cuadrado">
+                    <h3>Salta</h3>
+                </div>
+            </a>
+        </article>
+        
+        <article >
+            <a href="pages/Santa-Cruz.html" target="_blank">
+                <figure>
+                    <img class="imagen" src="img/san-carlos-de-bariloche.jpg" alt="provincia">
+                </figure>
+                <div class="cuadrado">
+                    <h3>Santa Cruz</h3>
+                </div>
+            </a>
+        </article>
+      </div>
+  </section>
+
+  <section >
+    <div class="centrado">
+        <form action="" name="formulario" method="get" id="formulario">
+          <h2>Regístrate </h2>
+          <hr>
+          <div class="formulario">
+            <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre y apellido">
+            <br>
+            <input type="text" name="email" id="email" maxlength="30" placeholder="email">
+            <br>
+            <p><input type="checkbox" name="terminos" id="terminos">Términos y condiciones</p>  
+            <br>
+            <input type="submit" id="btn" name="btn" value="enviar" >
+          </div>
+        </form>
+    </div>
+  </section>
+
+  <footer>
+    <hr>
+    <div class="centrado">
+      <p class="copy"> ColeccionArg &copy; 2022</p>
+      <div class="sociales">
+        <a class="icon-instagram" href="#"> </a>
+        <a class="icon-facebook-circled" href="#"> </a>
+        <a class="icon-linkedin-circled" href="#"> </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+        var formulario = document.getElementsByName('formulario')[0],
+        elementos = formulario.elements,
+        boton = document.getElementById('btn');
+        var validarNombre = function(e){
+            if(formulario.nombre.value == 0) {
+                alert("Completa el campo nombre y apellido")
+                e.preventDefault();
+            }
+        };
+        var validarEmail = function(e){
+            if(formulario.email.value == 0) {
+                alert("Completa el campo email")
+                e.preventDefault();
+            }
+        };
+        var validarCheckBox = function(e){
+            if(formulario.terminos.checked == false){
+                alert("Acepta los terminos y condiciones")
+                e.preventDefault();
+            }
+        };
+        var validar = function(e){
+            validarNombre(e);
+            validarEmail(e);
+            validarCheckBox(e);
+        };
+        formulario.addEventListener('submit', validar);
+    }())
+  </script>
+</body>
+</html>
